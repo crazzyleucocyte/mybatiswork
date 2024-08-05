@@ -24,7 +24,7 @@ public class BoardListController extends HttpServlet {
 		
 		String keyField =String.valueOf(request.getParameter("keyField"));
 		String keyWord=request.getParameter("keyWord");
-		System.out.println(keyWord);
+		//System.out.println(keyWord);
 		int totalRecord = new BoardServiceImpl().selectTotalRecord(keyField,keyWord);
 		int nowPage = Integer.parseInt(request.getParameter("nowPage"));
 		

@@ -31,7 +31,7 @@ public class MemberLoginController extends HttpServlet {
 		}else {
 		
 		session.setAttribute("loginUser", loginUser);
-		System.out.println("request.getContextPath()"+request.getContextPath());
+		//System.out.println("request.getContextPath()"+request.getContextPath());
 		response.sendRedirect(request.getContextPath());
 		}
 	}

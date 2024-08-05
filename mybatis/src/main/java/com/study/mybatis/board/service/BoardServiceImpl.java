@@ -27,7 +27,7 @@ public class BoardServiceImpl implements BoardService {
 		SqlSession sqlSession = Template.getSqlSession();
 		
 		int totalRecord = bDao.selectTotalRecord(sqlSession, keyField, keyWord);
-		System.out.println("totalRecord : "+totalRecord);
+		//System.out.println("totalRecord : "+totalRecord);
 		sqlSession.close();
 		return totalRecord;
 	}
@@ -71,7 +71,7 @@ public class BoardServiceImpl implements BoardService {
 	public boolean insertReply(Reply reply) {
 		SqlSession sqlSession = Template.getSqlSession();
 		int result = bDao.insertReply(sqlSession, reply);
-		System.out.println(result);
+		//System.out.println(result);
 		boolean flag=false;
 		if((result>0)) {
 			flag=true;

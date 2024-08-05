@@ -21,7 +21,7 @@ public class BoardInsertReply extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		PrintWriter out = response.getWriter();
-		System.out.println("문제가 어디야!!!  3");
+		//System.out.println("문제가 어디야!!!  3");
 
 
 		
@@ -39,9 +39,9 @@ public class BoardInsertReply extends HttpServlet {
 		//insert 성공
 		if(result) {
 			System.out.println("끝까지 갔다가 컨트롤러로 옴");
-			session.setAttribute("insertedReply", 1);
+			//request.setAttribute("insertedReply", 1);
 //			request.setAttribute("bno", refBno);
-//			request.getRequestDispatcher("detail.bo?bno="+refBno).forward(request, response);
+			//request.getRequestDispatcher("detail.bo?bno="+refBno).forward(request, response);
 		}
 		out.print(result);
 	}
@@ -58,15 +58,7 @@ public class BoardInsertReply extends HttpServlet {
 	 */
 
 
-	/*
-	 * protected void doGet(HttpServletRequest request, HttpServletResponse
-	 * response) throws ServletException, IOException {
-	 * //System.out.println("doGet으로 옴"); request.setAttribute("bno",
-	 * request.getParameter("bno"));
-	 * request.getRequestDispatcher("detail.bo").forward(request, response);
-	 * 
-	 * }
-	 */
+	
 }
 
 
